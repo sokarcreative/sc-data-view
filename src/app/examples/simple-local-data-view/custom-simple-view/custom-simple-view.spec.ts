@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LocalDataTable } from './local-data-table';
+import { CustomSimpleView } from './custom-simple-view';
 
-describe('LocalDataTable', () => {
-  let component: LocalDataTable;
-  let fixture: ComponentFixture<LocalDataTable>;
+describe('CustomSimpleView', () => {
+  let component: CustomSimpleView;
+  let fixture: ComponentFixture<CustomSimpleView>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LocalDataTable]
+      imports: [CustomSimpleView]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LocalDataTable);
+    fixture = TestBed.createComponent(CustomSimpleView);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

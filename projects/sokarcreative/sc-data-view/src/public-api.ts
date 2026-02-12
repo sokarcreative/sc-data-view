@@ -9,3 +9,4 @@ export type {Views} from './lib/models/view/views';
 export type {SimpleViewData} from './lib/models/view/simple-view-data';
 export type {DataCall} from './lib/models/data-call';
 export {DefaultSimpleView} from './lib/components/simple-view/default-simple-view/default-simple-view';
+export type {SimpleViewComponent} from './lib/components/simple-view/models/simple-view-component';

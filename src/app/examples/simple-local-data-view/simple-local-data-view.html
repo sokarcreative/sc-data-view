@@ -1,0 +1,6 @@
+<div class="w-full flex justify-center my-2">
+  <p-select [options]="simpleViewOptions" [(ngModel)]="simpleViewSelected" optionLabel="label" optionValue="key"/>
+</div>
+
+<lib-sc-data-view [dataSource]="mockedUsersLocalDataSource()" [view]="view()"/>
+

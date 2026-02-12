@@ -1,0 +1,24 @@
+<div class="w-full mx-2">
+  @if (dataCall(); as dataCall) {
+
+    @if (!dataCall.isRunning) {
+      <p-button styleClass="mb-2" icon="pi pi-refresh" label="Refresh" (onClick)="refresh.emit()"/>
+    }
+    @if (dataCall.isRunning) {
+      <p-progress-spinner class="content-center"/>
+    } @else if (dataCall.isSuccess) {
+      @if (dataCall.data != null) {
+        <ul class="grid gap-1 max-w-max">
+          @for (item of dataCall.data; track item) {
+            <li class="p-1 rounded-sm border-[0.5px]">{{ item | json }}</li>
+          }
+        </ul>
+      }
+    } @else if (dataCall.isError) {
+      @if (dataCall.error != null) {
+        <div>{{ dataCall.error }}</div>
+      }
+    }
+
+  }
+</div>
