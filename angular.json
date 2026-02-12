@@ -68,6 +68,32 @@
           "builder": "@angular/build:unit-test"
         }
       }
+    },
+    "@sokarcreative/sc-data-view": {
+      "projectType": "library",
+      "root": "projects/sokarcreative/sc-data-view",
+      "sourceRoot": "projects/sokarcreative/sc-data-view/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sokarcreative/sc-data-view/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sokarcreative/sc-data-view/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/sokarcreative/sc-data-view/tsconfig.spec.json"
+          }
+        }
+      }
     }
   }
 }

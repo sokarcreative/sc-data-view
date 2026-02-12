@@ -3,6 +3,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@sokarcreative/sc-data-view": [
+        "./dist/sokarcreative/sc-data-view"
+      ]
+    },
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -28,6 +33,12 @@
     },
     {
       "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/sokarcreative/sc-data-view/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/sokarcreative/sc-data-view/tsconfig.spec.json"
     }
   ]
 }
