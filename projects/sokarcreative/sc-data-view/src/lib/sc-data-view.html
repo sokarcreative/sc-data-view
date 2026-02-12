@@ -1,0 +1,8 @@
+@if (view().simple; as simpleViewData) {
+  @if (dataCall(); as dataCall) {
+    <lib-simple-view [dataCall]="dataCall" [simpleViewData]="simpleViewData"
+                     (refresh)="easyCall()?.refresher?.refresh()"/>
+  }
+
+}
+

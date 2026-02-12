@@ -1,0 +1,22 @@
+@if (dataCall(); as dataCall) {
+  @if (!dataCall.isRunning) {
+    <button
+      type="button"
+      (click)="refresh.emit()">
+      Refresh
+    </button>
+  }
+  @if (dataCall.isRunning) {
+    Loading...
+  } @else if (dataCall.isSuccess) {
+    @if (dataCall.data != null) {
+      @for (item of dataCall.data; track item) {
+        <div>{{ item | json }}</div>
+      }
+    }
+  } @else if (dataCall.isError) {
+    @if (dataCall.error != null) {
+      <div>{{ dataCall.error }}</div>
+    }
+  }
+}
